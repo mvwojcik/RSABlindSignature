@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guithings.controllers.MainSceneController">
+   <children>
+      <VBox layoutY="1.0" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="802.0" text="Podpis Cyfrowy" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="27.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="PlikDoPodpisu" mnemonicParsing="false" onAction="#PlikDoSprawdzenia" prefHeight="80.0" prefWidth="400.0" text="Wybierz plik do podpisu">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="PlikDoSprawdzenia" mnemonicParsing="false" onAction="#PlikDoSprawdzenia" prefHeight="80.0" prefWidth="400.0" text="Wybierz plik do sprawdzenia">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="120.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listView" layoutX="157.0" prefHeight="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="75.0" prefWidth="132.0" text="Podaj nazwę do zapisu:">
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="NazwaTextField" prefHeight="26.0" prefWidth="283.0">
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="Podpisz" mnemonicParsing="false" onAction="#Podpisz" prefHeight="80.0" prefWidth="400.0" text="Podpisz">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Sprawdz" mnemonicParsing="false" onAction="#Sprawdz" prefHeight="80.0" prefWidth="400.0" text="Sprawdz">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" prefHeight="130.0" prefWidth="800.0" text="Czy się udało" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
