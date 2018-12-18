@@ -11,7 +11,7 @@ import java.io.File;
 
 public class ChoosingDialogController {
 
-
+ControllersInterface ci;
     @FXML
     private AnchorPane Pane;
 
@@ -26,7 +26,12 @@ public class ChoosingDialogController {
     @FXML
     void ConfirmOnAction(ActionEvent event) {
         StaticStuff.getMainController().getListView().getItems().add(this.PathTextField.getText()); //dodaje wybrany plik do listyitemów
-        Pane.sceneProperty().get().getWindow().hide();
+        StaticStuff.getMainStage().close();
+    }
+    @FXML
+    public void initialize()
+    {
+        ci = new ControllersInterface();
     }
 
     public void openFileChooser() {

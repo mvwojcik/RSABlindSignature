@@ -5,12 +5,11 @@ import java.math.BigInteger;
 public class KeysGenerator {
     BigInteger p;
     BigInteger q;
-    BigInteger euler;
 
     KeysGenerator() {
 
         this.p = BigInteger.valueOf(2).pow(121).nextProbablePrime();
-        this.q = BigInteger.valueOf(3).pow(79).nextProbablePrime();
+        this.q = BigInteger.valueOf(3).pow(82).nextProbablePrime();
 
     }
 
@@ -39,9 +38,18 @@ public class KeysGenerator {
         }
         return null;
     }
+    public BigInteger getR() {
+        for (BigInteger i = BigInteger.valueOf(2); i.compareTo(this.getEulerF()) == -1; i = i.add(BigInteger.valueOf(1))) {
+
+            if (((i.gcd(this.getN())).compareTo(BigInteger.valueOf(1))) == 0)
+            {
+                return i;
+            }
+        }
+        return null;
+    }
 
     public BigInteger getD() {
-
         return this.getE().modInverse(this.getEulerF());
     }
 }

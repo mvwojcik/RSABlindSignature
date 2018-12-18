@@ -17,7 +17,7 @@ public class FxmlUtils {
         try {
             return loader.load();
         } catch (IOException e) {
-            guithings.utils.ExceptionDialog.errorDialog("Wolisz zjesc gowno czy szklankę?");
+            guithings.utils.ExceptionDialog.errorDialog("FXML LOADER ERROR");
         }
         return null;
     }
@@ -28,13 +28,16 @@ public class FxmlUtils {
         Scene scene = new Scene(pane);
 
         primaryStage.setScene(scene);
+        StaticStuff.setActualStage(primaryStage);
         primaryStage.show();
+        /*
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
                 StaticStuff.shutDown();
             }
         });
+        */
 
     }
 
