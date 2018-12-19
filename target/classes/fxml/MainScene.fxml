@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -34,7 +35,10 @@
             </HBox>
             <AnchorPane prefHeight="120.0" prefWidth="200.0">
                <children>
-                  <ListView fx:id="listView" layoutX="157.0" prefHeight="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+                  <ListView fx:id="listView" cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="157.0" prefHeight="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></ListView>
                </children>
             </AnchorPane>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -57,16 +61,25 @@
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="WHITE" />
+                     </effect>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#podpisz" prefHeight="80.0" prefWidth="400.0" text="Podpisz">
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="#a7a6a6" />
+                     </effect>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#odbierz" prefHeight="80.0" prefWidth="400.0" text="Odbierz">
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="#bdb7b7" />
+                     </effect>
                   </Button>
                </children>
             </HBox>

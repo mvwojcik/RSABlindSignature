@@ -1,13 +1,9 @@
 package guithings.controllers;
 
 import Algorithm.RSA;
-import guithings.utils.ExceptionDialog;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import guithings.utils.FxmlUtils;
 import guithings.utils.StaticStuff;
 
 import java.io.*;
@@ -16,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainSceneController extends BaseController {
+public class MainSceneController {
 
     @FXML
     private TextField nazwaTextField;

@@ -6,6 +6,20 @@
     -fx-border-color: linear-gradient(to bottom, #000000 0%, #04619f 74%);
 }
 
+.split-pane
+{
+
+    -fx-background-color: linear-gradient(to top, #3b3b36 0%, #958e69 74%);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(to bottom, #000000 0%, #04619f 74%);
+}
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-box-border transparent #BBBBBB;
+    -fx-background-color: transparent, -fx-inner-border-horizontal;
+    -fx-background-insets: 0, 0 1 0 1;
+}
+
 .label
 {
 -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
