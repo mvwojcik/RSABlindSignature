@@ -1,5 +1,6 @@
 package guithings.utils;
 
+import animatefx.animation.FadeIn;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -28,6 +29,7 @@ public class FxmlUtils {
         primaryStage.setScene(scene);
         StaticStuff.setActualStage(primaryStage);
         primaryStage.show();
+
         /*
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

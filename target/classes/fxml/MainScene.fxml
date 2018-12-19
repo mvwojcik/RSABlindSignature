@@ -16,7 +16,7 @@
    <children>
       <VBox layoutY="1.0" prefHeight="500.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="802.0" styleClass="label-tytul" text="Ślepy podpis cyfrowy algorytmem RSA" textAlignment="CENTER">
+            <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="802.0" styleClass="label-tytul" text="Ślepy podpis cyfrowy algorytmem RSA" textAlignment="CENTER">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="27.0" />
                </font>
@@ -57,7 +57,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#przeslon" prefHeight="80.0" prefWidth="400.0" text="Przesłoń">
+                  <Button fx:id="przeslon" mnemonicParsing="false" onAction="#przeslon" prefHeight="80.0" prefWidth="400.0" text="Przesłoń">
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>
@@ -65,7 +65,7 @@
                         <DropShadow color="WHITE" />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#podpisz" prefHeight="80.0" prefWidth="400.0" text="Podpisz">
+                  <Button fx:id="podpisz" mnemonicParsing="false" onAction="#podpisz" prefHeight="80.0" prefWidth="400.0" text="Podpisz">
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>
@@ -73,7 +73,7 @@
                         <DropShadow color="#a7a6a6" />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#odbierz" prefHeight="80.0" prefWidth="400.0" text="Odbierz">
+                  <Button fx:id="odbierz" mnemonicParsing="false" onAction="#odbierz" prefHeight="80.0" prefWidth="400.0" text="Odbierz">
                      <HBox.margin>
                         <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
                      </HBox.margin>

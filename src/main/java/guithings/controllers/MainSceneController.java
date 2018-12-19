@@ -1,7 +1,10 @@
 package guithings.controllers;
 
 import Algorithm.RSA;
+import animatefx.animation.*;
+import guithings.utils.ExceptionDialog;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import guithings.utils.StaticStuff;
@@ -29,6 +32,18 @@ public class MainSceneController {
     @FXML
     private ChoiceBox choiceBoxP2;
 
+    @FXML
+    private Label mainLabel;
+
+    @FXML
+    private Button przeslon;
+
+    @FXML
+    private Button podpisz;
+
+    @FXML
+    private Button odbierz;
+
 
     private File file;
 
@@ -40,6 +55,8 @@ public class MainSceneController {
     private void initialize() {
         StaticStuff.setMainController(this);
 
+        new BounceIn(mainLabel).play();
+
     }
 
     @FXML
@@ -47,8 +64,7 @@ public class MainSceneController {
 
         ControllersInterface controllersInterface = new ControllersInterface();
         Thread thread1 = new Thread(controllersInterface, "Jazda");
-
-        controllersInterface.run();
+thread1.run();
 
     }
 
@@ -65,6 +81,8 @@ public class MainSceneController {
         this.saveStringToFile(rsa.getValues());
         this.saveStringToFile(rsa.getOryginalSignature(), "sign");
 
+        new Flash(this.przeslon).play();
+
     }
 
     @FXML
@@ -75,6 +93,9 @@ public class MainSceneController {
         rsa.saveStringValuesToBigInteger(this.saveFiletoString(file));
         rsa.startSigning();
         this.saveStringToFile(rsa.getValues());
+
+        new Flash(this.podpisz).play();
+
     }
 
     @FXML
@@ -86,6 +107,7 @@ public class MainSceneController {
         rsa.saveStringValuesToBigInteger(this.saveFiletoString(file));
         rsa.startChecking();
         this.saveStringToFile(rsa.getValues());
+        new Flash(this.odbierz).play();
 
     }
 
@@ -104,17 +126,20 @@ public class MainSceneController {
                 }
             }
             if (flag == false) {
+
                 this.czySieUdalo.setText("Zgodność podpisu");
                 this.czySieUdalo.setVisible(true);
+                new SlideInUp(this.czySieUdalo).play();
+
             } else {
                 this.czySieUdalo.setText("Niezgodność podpisu");
                 this.czySieUdalo.setVisible(true);
-
+                new SlideInUp(this.czySieUdalo).play();
             }
         } else {
             this.czySieUdalo.setText("Niezgodność podpisu");
             this.czySieUdalo.setVisible(true);
-
+            new SlideInUp(this.czySieUdalo).play();
         }
     }
 
