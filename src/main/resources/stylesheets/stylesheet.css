@@ -1,0 +1,75 @@
+.root
+{
+ -fx-background-color: linear-gradient(to bottom, #000000 0%, #04619f 74%);
+-fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(to bottom, #000000 0%, #04619f 74%);
+}
+
+.split-pane
+{
+
+    -fx-background-color: linear-gradient(to top, #3b3b36 0%, #958e69 74%);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(to bottom, #000000 0%, #04619f 74%);
+}
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-box-border transparent #BBBBBB;
+    -fx-background-color: transparent, -fx-inner-border-horizontal;
+    -fx-background-insets: 0, 0 1 0 1;
+}
+
+.label
+{
+-fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
+.button
+{
+    -fx-background-color: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);;
+    -fx-background-radius: 10;
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+
+
+}
+.choice-box
+{
+    -fx-background-color: linear-gradient(to bottom, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);;
+    -fx-background-radius: 10;
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
+.list-view
+{
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(to bottom, #ffffff 8%,#e5e5e5 96%);
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
+.list-view .list-cell:even {
+    -fx-background-color: #ffffff;
+    -fx-highlight-text-fill: #A1B56C;
+    -fx-background-radius: 10;
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
+.list-view .list-cell:odd {
+    -fx-background-color: #7F8C8D;
+    -fx-background-radius: 10;
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
+
+.label-tytul
+{
+    -fx-text-fill: linear-gradient(to bottom, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);
+    -fx-font-weight: Bold;
+}
+.text-field
+{
+    -fx-background-color:#d3d3d3 74%;
+    -fx-text-fill: linear-gradient(to bottom, #130f40 0%, #000000 74%);
+    -fx-font-weight: Bold;
+}
